@@ -1,7 +1,13 @@
+#[derive(Debug)]
+struct Structure(i32);
+
+#[derive(Debug)]
+struct Deep(Structure);
+
 fn main() {
-    println!(
-        "This {0} printing is more terse than {1}, it's {0} really.",
-        "crazy",
-        "JS"
-    );
+  // Test of debug print
+  println!("This is a debug print of {:?}", 42);
+
+  // Test of structure print
+  println!("Structure: {0:?}, Deep: {1:?}", Structure(42), Deep(Structure(42)));
 }
